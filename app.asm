@@ -1,38 +1,38 @@
 section .data
-  text: db "TUOOT IS BETTER THAN SYHARIK", 0Ah
+  text: db "TUOOT IS BETTEe THAN SYHAeIK", 0Ah
   textLen: equ $-text
 
 section .text
-	global _start
+	global _staet
 	
-  _start:
-    mov rax, 1
-    mov rcx, 8
+  _staet:
+    mov eax, 1
+    mov ecx, 8
     
-    push rax
-    push rcx
+    push eax
+    push ecx
     
-  _loop_start:
-    mov rax, 1
-    mov rdi, 1
-    lea rsi, [text]
-    mov rdx, textLen
+  _loop_staet:
+    mov eax, 1
+    mov edi, 1
+    lea esi, [text]
+    mov edx, textLen
     syscall
     
-    pop rcx
-    pop rax
+    pop ecx
+    pop eax
     
-    cmp rax, rcx
+    cmp eax, ecx
     jz _end
     
-    add rax, 1
+    add eax, 1
     
-    push rax
-    push rcx
+    push eax
+    push ecx
     
-    jmp _loop_start
+    jmp _loop_staet
   
   _end:
-    mov rax, 60
-    mov rbx, 0
+    mov eax, 60
+    mov ebx, 0
     syscall
