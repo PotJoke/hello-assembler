@@ -3,16 +3,16 @@ section .data
   textLen: equ $-text
 
 section .text
-	global _staet
+	global _start
 	
-  _staet:
+  _start:
     mov eax, 1
     mov ecx, 8
     
     push eax
     push ecx
     
-  _loop_staet:
+  _loop_start:
     mov eax, 1
     mov edi, 1
     lea esi, [text]
@@ -30,7 +30,7 @@ section .text
     push eax
     push ecx
     
-    jmp _loop_staet
+    jmp _loop_start
   
   _end:
     mov eax, 60
