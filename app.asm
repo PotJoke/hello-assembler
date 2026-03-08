@@ -1,5 +1,5 @@
 section .data
-  text: db "TUOOT IS BETTEe THAN SYHAeIK", 0Ah
+  text: db "TUOOT IS BETTER THAN SYHARIK", 0Ah
   textLen: equ $-text
 
 section .text
